@@ -7,6 +7,9 @@ pipeline {
   }
   stages {
     stage('Say Hellos') {
+      environment {
+        MY_NAME = 'foo'
+      }
       steps {
         echo 'Hello World'
         sh 'java -version'
